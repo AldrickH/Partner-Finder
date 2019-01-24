@@ -1,0 +1,18 @@
+View Message
+====================
+
+Normal Path :
+********************
+	User						System
+1.	Run program
+2.	Melakukan login**						
+3.							Mengambil data dari database
+4.							Menampilkan halaman utama
+5.	Klik tombol Message					
+6. 							Menampilkan halaman message
+7.	Pilih salah satu message
+selesai
+
+Respon
+********************
+System menampilkan halaman message

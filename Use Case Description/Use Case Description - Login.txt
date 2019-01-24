@@ -1,0 +1,23 @@
+Login
+====================
+
+Normal Path
+********************
+	User						System
+1.	Run Program
+2.							Menampilkan Form Login
+3.	Mengisi username dan password pada Form Login
+4.	Menekan tombol login
+5.							Memvalidasi inputan user
+6. 							Tampilan halaman utama
+selesai
+
+Alternative paths
+********************
+Validasi inputan user salah di langkah 5
+6. 	Lanjutkan normal path dari langkah 3.
+Selesai
+
+Respon
+********************
+System menampilkan halaman utama jika login berhasil

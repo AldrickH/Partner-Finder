@@ -1,0 +1,25 @@
+View Profile
+=================
+
+Normal Path
+********************
+	User						System
+1.	Run program
+2.	Melakukan login**						
+3.							Mengambil data dari database
+4.							Menampilkan halaman utama
+5.	Memilih user lain dengan klik nama					
+6. 							Menampilkan profile user yang terpilih
+selesai
+
+Alternative paths
+********************
+User melakukan pencarian di langkah 5
+5. 	User memasukkan data dan menekan tombol search
+6.							Menampilkan data hasil filter
+7. 	Lanjutkan normal path dari langkah 5.
+selesai
+
+Respon
+********************
+System menampilkan halaman profil user lain

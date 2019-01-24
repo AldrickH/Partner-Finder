@@ -1,0 +1,40 @@
+Follow
+====================
+
+Normal Path
+********************
+	User					Program
+1.	Run Program
+2.	Melakukan login**
+3.						Mengambil data dari database	
+4.						Menampilkan halaman utama
+5.	Melakukan Pencarian user	
+6.	Klik tombol Follow
+7.						Update database
+Selesai
+
+Alternative paths
+********************
+User melakukan Pencarian User melalui fitur filter pada langkah 5
+5.	Memilih kriteria yang akan difilter
+6.						Menampilkan data hasil filter
+7.	Lanjutkan normal path pada langkah 6
+Selesai.
+
+User melakukan Pencarian user melalui kolom search pada langkah 5
+5.	Input data di kolom search
+6.						Menampilkan data hasil filter
+7.	Lanjutkan normal path pada langkah 6
+Selesai.
+
+User menekan tombol Unfollow pada langkah 6
+4.	Menekan tombol Unfollow		
+5.						alert konfirmasi
+6.	Menekan tombol konfirmasi
+7.	Lanjutkan normal path pada langkah 7
+selesai.
+
+Respon
+********************
+Tombol follow di ganti menjadi Unfollow, setelah user telah follow user lain
+Tombol Unfollow menjadi Follow, setelah user menekan tombol unfollow user lain

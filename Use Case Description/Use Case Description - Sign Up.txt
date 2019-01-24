@@ -1,0 +1,23 @@
+Sign Up
+====================
+
+Normal Path :
+********************
+	User						System
+1.	Run program
+2.							Menampilkan Halaman Login
+3.	Klik tombol sign up						
+4.	Input data diri					
+5.							masukkan data ke database
+6. 							menampilkan pesan sign up berhasil
+selesai
+
+Alternative paths
+********************
+Data di langkah 4 tidak valid
+5. lanjutkan normal path dari langkah 4
+selesai
+
+Respon
+********************
+System menampilkan sign up berhasil
