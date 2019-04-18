@@ -3,37 +3,34 @@ Send Message
 
 Normal Path 
 ********************
-	User					System
-1.	Run Program
-2.	Melakukan login**
-3.						Mengambil data dari database			
-4.						Menampilkan halaman utama
-5.	Melakukan pencarian user						
-6.	Klik tombol Send Message
-7.						Masuk ke dalam form Messenger
-8.	Masukkan pesan yang akan dikirim
-8.						Update Database setiap pengiriman pesan
-9.						Tampilan pesan terkirim
+	User					System		
+1.						Menampilkan halaman utama
+2.	Melakukan pencarian user						
+3.	Klik tombol Send Message
+4.						Masuk ke dalam form Messenger
+5.	Masukkan pesan yang akan dikirim
+6.						Update Database setiap pengiriman pesan
+7.						Tampilan pesan terkirim
 Selesai	
 
 Alternative paths
 ********************
-User melakukan Pencarian User melalui fitur filter pada langkah 5
-5.	Memilih kriteria yang akan difilter
-6.						Menampilkan data hasil filter
-7.	Lanjutkan normal path pada langkah 6
+User melakukan Pencarian User melalui fitur filter pada langkah 2
+2.	Memilih kriteria yang akan difilter
+3.						Menampilkan data hasil filter
+4.	Lanjutkan normal path pada langkah 6
 Selesai.
 
-User melakukan Pencarian user melalui kolom search pada langkah 5
-5.	Input data di kolom search
-6.						Menampilkan data hasil filter
-7.	Lanjutkan normal path pada langkah 6
+User melakukan Pencarian user melalui kolom search pada langkah 2
+2.	Input data di kolom search
+3.						Menampilkan data hasil filter
+4.	Lanjutkan normal path pada langkah 6
 Selesai.
 
-User membuka halaman "Messenger" pada langkah 5
-5.	Tekan button messenger
-6.						Menampilkan form Messenger
-7.	Lanjutkan normal path pada langkah 8
+User membuka halaman "Messenger" pada langkah 2
+2.	Tekan button messenger
+3.						Menampilkan form Messenger
+4.	Lanjutkan normal path pada langkah 8
 selesai.
 
 Respon
