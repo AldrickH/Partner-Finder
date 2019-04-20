@@ -22,6 +22,15 @@ function getAllUser()
     else return null;
 }
 
+function searchUserByUsername($username)
+{
+    include 'config.php';
+
+    $sql = "SELECT * FROM user where username like '%$username%'";
+    if ($result = mysqli_query($conn, $sql)) return $result;
+    else return null;
+}
+
 function getUserByUsername($username)
 {
     include 'config.php';
@@ -68,5 +77,56 @@ function getAllMessageByUsername($_sender, $_receiver)
 
     if ($result = mysqli_query($conn, $sql)) return $result;
     else return null;
+}
+
+function addNewMessage($_sender, $_receiver, $message)
+{
+    include 'config.php';
+
+    $sql = "INSERT INTO message (messageContent, sender, receiver) VALUES ('$message', '$_sender', '$_receiver')";
+    if (mysqli_query($conn, $sql)) return true;
+    else return false;
+}
+
+// Follow
+
+function addNewFollow($_user, $_targetUser)
+{
+    include 'config.php';
+
+    $sql = "INSERT INTO follow (username, following_username) values ('$_user', '$_targetUser')";
+    if (mysqli_query($conn, $sql)) return true;
+    else return false;
+}
+
+function removeFollow($_user, $_targetUser)
+{
+    include 'config.php';
+
+    $sql = "DELETE FROM follow WHERE username = '$_user' AND following_username = '$_targetUser'";
+    if (mysqli_query($conn, $sql)) return true;
+    else return false;
+}
+
+function checkFollow($_user, $_targetUser)
+{
+    include 'config.php';
+
+    $sql = "SELECT * FROM follow where username = '$_user' AND following_username = '$_targetUser'";
+
+    if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) return true;
+        else return false;
+    } else return null;
+}
+
+function getTotalFollower($_user)
+{
+    include 'config.php';
+
+    $sql = "SELECT * FROM follow where following_username = '$_user'";
+    if ($result = mysqli_query($conn, $sql)) {
+        return mysqli_num_rows($result);
+    } else return null;
 }
 ?>

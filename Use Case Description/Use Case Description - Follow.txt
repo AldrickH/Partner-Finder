@@ -3,32 +3,35 @@ Follow
 
 Normal Path
 ********************
-	User					Program	
-1.						Menampilkan halaman utama
-2.	Melakukan Pencarian user	
-3.	Klik tombol Follow
-4.						Update database
+	User					Program
+1.	Run Program
+2.	Melakukan login**
+3.						Mengambil data dari database	
+4.						Menampilkan halaman utama
+5.	Melakukan Pencarian user	
+6.	Klik tombol Follow
+7.						Update database
 Selesai
 
 Alternative paths
 ********************
-User melakukan Pencarian User melalui fitur filter pada langkah 2
-2.	Memilih kriteria yang akan difilter
-3.						Menampilkan data hasil filter
-4.	Lanjutkan normal path pada langkah 3
+User melakukan Pencarian User melalui fitur filter pada langkah 5
+5.	Memilih kriteria yang akan difilter
+6.						Menampilkan data hasil filter
+7.	Lanjutkan normal path pada langkah 6
 Selesai.
 
-User melakukan Pencarian user melalui kolom search pada langkah 2
-2.	Input data di kolom search
-3.						Menampilkan data hasil filter
-4.	Lanjutkan normal path pada langkah 3
+User melakukan Pencarian user melalui kolom search pada langkah 5
+5.	Input data di kolom search
+6.						Menampilkan data hasil filter
+7.	Lanjutkan normal path pada langkah 6
 Selesai.
 
-User menekan tombol Unfollow pada langkah 3
-3.	Menekan tombol Unfollow		
-4.						alert konfirmasi
-5.	Menekan tombol konfirmasi
-6.	Lanjutkan normal path pada langkah 4
+User menekan tombol Unfollow pada langkah 6
+4.	Menekan tombol Unfollow		
+5.						alert konfirmasi
+6.	Menekan tombol konfirmasi
+7.	Lanjutkan normal path pada langkah 7
 selesai.
 
 Respon

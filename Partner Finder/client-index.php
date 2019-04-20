@@ -28,11 +28,13 @@ include 'client-login-check.php';
         <?php include 'sidebar.php' ?>
 
         <div class="col-md-9">
+          <h1 style="text-align: center; margin-bottom: 100px;">ALL PEOPLE</h1>
 
           <!-- Nearby People List
             ================================================= -->
           <?php
-          $allUserData = getAllUser();
+          if (isset($_GET['search'])) $allUserData = searchUserByUsername($_GET['search']);
+          else $allUserData = getAllUser();
 
           foreach ($allUserData as $user) {
             if ($user['username'] == $_SESSION['username']) continue;
@@ -50,7 +52,11 @@ include 'client-login-check.php';
                     <p class="text-muted">Address :<?php echo $user['address'] ?> </p>
                   </div>
                   <div class="col-md-3 col-sm-3">
-                    <button class="btn btn-primary pull-right">Follow</button>
+                    <?php if (checkFollow($_SESSION['username'], $user['username'])) { ?>
+                      <a href="con-client.php?page=unfollow&username=<?php echo $user['username'] ?>"><button class="btn btn-primary pull-right" style="background: #C0C0C0; color: black;">Unfollow</button></a>
+                    <?php } else { ?>
+                      <a href="con-client.php?page=follow&username=<?php echo $user['username'] ?>"><button class="btn btn-primary pull-right">Follow</button></a>
+                    <?php } ?>
                   </div>
                 </div>
               </div>

@@ -19,10 +19,10 @@
                 <li class="dropdown"><a href="con-client.php?page=logout">Logout</a></li>
             </ul>
             
-            <form class="navbar-form hidden-sm">
+            <form class="navbar-form hidden-sm" action="con-client.php?page=search-user" method="POST">
                 <div class="form-group" style="margin-left: 200px;">
                     <i class="icon ion-android-search"></i>
-                    <input type="text" style="width: 400px;" class="form-control" placeholder="Search friends, photos, videos">
+                    <input type="text" name="search" style="width: 400px;" class="form-control" placeholder="Search friends">
                 </div>
             </form>
 

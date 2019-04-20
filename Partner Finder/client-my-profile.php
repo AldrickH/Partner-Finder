@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'mod-client.php';
 include 'client-login-check.php';
 
@@ -39,8 +39,12 @@ $user = getUserByUsername($_GET['username']);
               </div>
             </div>
 
-            <div class="col-md-9">
-              <button class="btn-primary">Follow &nbsp;&nbsp; +</button>
+            <div class="col-md-9" style="display: <?php if ($_GET['username'] == $_SESSION['username']) echo "none"; else echo ""; ?>">
+              <?php if (checkFollow($_SESSION['username'], $user['username'])) { ?>
+                <a href="con-client.php?page=unfollow&username=<?php echo $user['username'] ?>"><button class="btn btn-primary" style="background: #C0C0C0; color: black;">Unfollow</button></a>
+              <?php } else { ?>
+                <a href="con-client.php?page=follow&username=<?php echo $user['username'] ?>"><button class="btn btn-primary">Follow</button></a>
+              <?php } ?>
             </div>
 
           </div>
@@ -95,7 +99,7 @@ $user = getUserByUsername($_GET['username']);
           <div class="col-md-2 static">
             <div id="sticky-sidebar">
               <h4 class="grey">Followers</h4>
-              <p>1000 follower</p>
+              <p><?php echo getTotalFollower($_SESSION['username'])?></p>
             </div>
           </div>
         </div>

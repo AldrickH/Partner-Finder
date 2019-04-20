@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'mod-client.php';
 include 'client-login-check.php';
 ?>
@@ -104,17 +104,55 @@ include 'client-login-check.php';
                       </div>
                     </div>
 
-                    <?php } ?>
-                  </div>
+                  <?php } ?>
+                </div>
 
                 <!--Chat Messages in Right End-->
 
-                <div class="send-message">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Type your message">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Send</button>
-                    </span>
+
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Send Message</button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+
+                        <form action="con-client.php?page=send-message" method="POST">
+                          <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            
+                            <select name="user_receiver" id="user_receiver" class="form-control">
+                              <option value="" selected> Choose </option>
+
+                              <?php
+                              $allUser = getAllUser();
+
+                              foreach ($allUser as $user) { ?>
+                                <option value="<?php echo $user['username']; ?>"><?php echo $user['fullname']; ?></option>
+                              <?php } ?>
+                            </select>
+
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text" name="messageContent"></textarea>
+                          </div>
+
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Send message</button>
+                          </div>
+                        </form>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
 
@@ -138,6 +176,7 @@ include 'client-login-check.php';
   <!-- Scripts
     ================================================= -->
   <?php include 'js-client.php' ?>
+
 </body>
 
 </html>
